@@ -1,0 +1,71 @@
+
+
+<html>
+<!----
+/******
+ * Javascript Graph class
+ *
+ * This class is free for the educational use as long as maintain this header together with this class.
+ * Author: Win Aung Cho
+ * Contact winaungcho@gmail.com
+ * version 1.0
+ * Date: 27-11-2020
+ *
+ ******/
+ ----->
+ 
+<head>
+	<meta name="viewport" content="width=device-width, 
+	initial-scale=0.6">
+	<style>
+	
+	</style>
+	<script src="myGraph.js">
+	</script>
+</head>
+
+<body onload="Test('C')">
+	<h1>Directed Graph</h1>
+	<p>Select Starting Node
+		<select onchange="schedule(this.value)">
+			<option>Select</option>
+			<option>Aa</option>
+			<option>B</option>
+			<option>C</option>
+			<option>D</option>
+			<option>E</option>
+			<option>F</option>
+			<option>G</option>
+		</select>
+	</p>
+	<canvas id="canvas" width="500" height="500"></canvas>
+	<table style="width: 100%">
+		<colgroup>
+			<col span="1" style="width: 20%;">
+				<col span="1" style="width: 20%;">
+					<col span="1" style="width: 30%;">
+						<col span="1" style="width: 30%;">
+		</colgroup>
+		<!-- Put <thead>, <tbody>, and <tr>'s here! -->
+		<tbody>
+			<tr>
+				<td id="dfsrecursive" style="background-color: #ccc; padding:10px"></td>
+				<td id="bfs" style="background-color: #ddd; padding: 10px"></td>
+				<td id="dijkstra" style="background-color: #ccc; padding: 10px"></td>
+				<td id="prime" style="background-color: #ddd; padding: 10px"></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>DFS: Traversing Depth First Search Algorythm</p>
+	<p>BFS: Traversing Breadth First Search Algorythm</p>
+	<p>DIJKSTRA Algorythm: Minimum cost spanning algorythm.
+		<br/>DIJKSTRA value may be any of cost, travelling distance, fuel consumption or any value like cost.</p>
+	<p>MST: Minimum Spanning Tree</p>
+	<script>
+	function schedule(selectedValue) {
+		Test(selectedValue);
+	}
+	</script>
+</body>
+
+</html>
